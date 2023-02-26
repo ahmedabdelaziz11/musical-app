@@ -24,10 +24,10 @@ Route::post('venue/{id}',[VenueController::class,'destroy']);
 
 
 Route::get('artists/{name?}',[ArtistController::class,'index']);
-Route::get('artist/{id}',[VenueController::class,'show']);
-Route::post('artists',[VenueController::class,'store']);
-Route::post('artists/{id}',[VenueController::class,'update']);
-Route::post('artist/{id}',[VenueController::class,'destroy']);
+Route::get('artist/{id}',[ArtistController::class,'show']);
+Route::post('artists',[ArtistController::class,'store']);
+Route::post('artists/{id}',[ArtistController::class,'update']);
+Route::post('artist/{id}',[ArtistController::class,'destroy']);
 
 
 Route::get('shows/{title?}',[ShowController::class,'index']);

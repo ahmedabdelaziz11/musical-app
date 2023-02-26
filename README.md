@@ -10,8 +10,6 @@ Laravel + v8
 ## getting started steps
 
 
-## Installation
-
 1.clone the project
 
 ```git
@@ -56,4 +54,5 @@ php artisan key:generate; php artisan migrate --seed; php artisan serve;
 
 
 ## any notes
+
 

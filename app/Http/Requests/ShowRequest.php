@@ -28,7 +28,7 @@ class ShowRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'date' => 'required|',
+            'date' => 'required|date_format:Y-m-d H:i:s',
             'artist_id' => 'required|exists:artists,id',
             'venue_id' => 'required|exists:venues,id',
         ];

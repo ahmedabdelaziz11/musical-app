@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Artist;
 use App\Http\Requests\ArtistRequest;
 use App\Http\Resources\ArtistResource;
+use App\Http\Traits\Api\ApiResponseTrait;
 use Symfony\Component\HttpFoundation\Response;
 
 class ArtistController extends Controller
 {
+    use ApiResponseTrait;
     /**
      * Display a listing of the resource.
      *
