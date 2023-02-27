@@ -69,7 +69,7 @@ php artisan serve
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `anyname` | `string` | **Optinal**. Search input |
+| `anyname` | `string` | **Optinal**. Search input  |
 
 #### Get item
 
@@ -77,8 +77,8 @@ php artisan serve
   GET /api/artist/${id}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
+| Parameter | Type     | Description                         |
+| :-------- | :------- | :---------------------------------- |
 | `id`      | `number` | **Required**. Id of artist to fetch |
 
 #### Create new artist
@@ -89,8 +89,8 @@ php artisan serve
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `name`      | `string` | **Required**. name of artist |
-| `about`     | `string` | **Required**. about value |
+| `name`    | `string` | **Required**. name of artist      |
+| `about`   | `string` | **Required**. about artist        |
 
 #### Update artist
 
@@ -102,19 +102,18 @@ php artisan serve
 | :--------   | :------- | :-------------------------------- |
 | `id`        | `number` | **Required**. artist id number    |
 | `name`      | `string` | **Required**. new name of artist  |
-| `about`     | `string` | **Required**. new about value     |
+| `about`     | `string` | **Required**. new about of artist |
 
 #### Delete artist
 
 ```http
-    DELETE /api/artists/${id}?name=test&about=test
+    DELETE /api/artist/${id}
 ```
 
 | Parameter   | Type     | Description                       |
 | :--------   | :------- | :-------------------------------- |
 | `id`        | `number` | **Required**. artist id number    |
-| `name`      | `string` | **Required**. new name of artist  |
-| `about`     | `string` | **Required**. new about value     |
+
 
 #### Get all venues and search by name(optinal)
 
@@ -122,9 +121,9 @@ php artisan serve
     GET /api/venues/${anyname}
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `anyname`      | `string` | **Optinal**. new name of artist|
+| Parameter   | Type     | Description                                 |
+| :--------   | :------- | :------------------------------------------ |
+| `anyname`   | `string` | **Optinal**. name of venue you want to fetch|
 
 
 #### Get venue by id
@@ -135,7 +134,7 @@ php artisan serve
 
 | Parameter   | Type     | Description                       |
 | :--------   | :------- | :-------------------------------- |
-| `id`   | `number` | **Required**. venue id number          |
+| `id`        | `number` | **Required**. venue id number     |
 
 #### Create new venue
 
@@ -143,11 +142,11 @@ php artisan serve
     POST /api/venues?name=test&address=test&about=test
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `name`   | `number` | **Required**. venue id number          |
-| `address`| `string` | **Required**. venue id number          |
-| `about`  | `string` | **Required**. venue id number          |
+| Parameter   | Type     | Description          |
+| :--------   | :------- | :------------------- |
+| `name`   | `number` | **Required**.           |
+| `address`| `string` | **Required**.           |
+| `about`  | `string` | **Required**.           |
 
 #### Update venue
 
@@ -155,12 +154,12 @@ php artisan serve
     PUT /api/venues/${id}?name=test&address=test&about=test
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `id`     | `number` | **Required**. venue id number          |
-| `name`   | `string` | **Required**. venue id number          |
-| `address`| `string` | **Required**. venue id number          |
-| `about`  | `string` | **Required**. venue id number          |
+| Parameter   | Type     | Description         |
+| :--------   | :------- | :-------------------|
+| `id`     | `number` | **Required**.          |
+| `name`   | `string` | **Required**.          |
+| `address`| `string` | **Required**.          |
+| `about`  | `string` | **Required**.          |
 
 #### Delete venue
 
@@ -170,7 +169,7 @@ php artisan serve
 
 | Parameter   | Type     | Description                       |
 | :--------   | :------- | :-------------------------------- |
-| `id`     | `number` | **Required**. venue id number        |
+| `id`        | `number` | **Required**. venue id number     |
 
 #### Get all shows and search by title(optinal)
 
@@ -178,9 +177,9 @@ php artisan serve
     GET /api/venues/${anytitle}
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `anytitle`     | `string` | **Optinal**. anytitle for search      |
+| Parameter   | Type     | Description                          |
+| :--------   | :------- | :----------------------------------- |
+| `anytitle`     | `string` | **Optinal**. anytitle for search  |
 
 #### Get show by id
 
@@ -199,12 +198,12 @@ php artisan serve
     POST /api/shows?title=test&date=2023-02-26 22:53:32&artist_id=8&venue_id=6
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `title`     | `number` | **Required**. show id             |
-| `date`      | `number` | **Required**. show id             |
-| `artist_id` | `number` | **Required**. show id             |
-| `venue_id`  | `number` | **Required**. show id             |
+| Parameter   | Type     | Description               |
+| :--------   | :------- | :------------------------ |
+| `title`     | `number` | **Required**.             |
+| `date`      | `number` | **Required**.             |
+| `artist_id` | `number` | **Required**.             |
+| `venue_id`  | `number` | **Required**.             |
 
 #### Update show
 
@@ -212,13 +211,13 @@ php artisan serve
     PUT /api/shows/${id}?title=test&date=2023-02-26 22:53:32&artist_id=8&venue_id=6
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `id`        | `number` | **Required**. show id             |
-| `title`     | `number` | **Required**. show id             |
-| `date`      | `number` | **Required**. show id             |
-| `artist_id` | `number` | **Required**. show id             |
-| `venue_id`  | `number` | **Required**. show id             |
+| Parameter   | Type     | Descript                   |
+| :--------   | :------- | :------------------------- |
+| `id`        | `number` | **Required**.              |
+| `title`     | `number` | **Required**.              |
+| `date`      | `number` | **Required**.              |
+| `artist_id` | `number` | **Required**.              |
+| `venue_id`  | `number` | **Required**.              |
 
 #### Delete show
 
@@ -226,8 +225,8 @@ php artisan serve
     DELETE /api/show/${id}
 ```
 
-| Parameter   | Type     | Description                       |
-| :--------   | :------- | :-------------------------------- |
-| `id`        | `number` | **Required**. show id             |
+| Parameter   | Type     | Descri                     |
+| :--------   | :------- | :------------------------- |
+| `id`        | `number` | **Required**.              |
 
 
